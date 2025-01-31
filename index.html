@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="tabs-component" x-data="{ activeTab: 'rowers'}">
+      <div class="tabs-component__list" role="tablist" aria-label="web choices">
+        <button
+          role="tab"
+          :aria-selected="activeTab === 'rowers'"
+          @click="activeTab = 'rowers'"
+        >
+          Rowers
+        </button>
+        <button
+          role="tab"
+          :aria-selected="activeTab === 'bikes'"
+          @click="activeTab = 'bikes'"
+        >
+          Bikes
+        </button>
+        <button
+          role="tab"
+          :aria-selected="activeTab === 'treadmills'"
+          @click="activeTab = 'treadmills'"
+        >
+          Tread Mills
+        </button>
+      </div>
+      <div
+        class="tabs-component__overview"
+        role="tabpanel"
+        x-show="activeTab === 'rowers'"
+        x-transition
+      >
+        <img
+          src="https://echelonfit.com/cdn/shop/files/RowS-YogaPosesOffRow_fc484886-1a9d-4375-9487-9e27abf0bd45.jpg?v=1700600331&width=1080"
+          alt=""
+        />
+        <p>
+          This is required when, for example, the final text is not yet
+          available. Dummy text is also known as 'fill text'. It is said that
+          song composers of the past used dummy texts as lyrics.
+        </p>
+        <a href="#">See More &#8594;</a>
+      </div>
+      <div
+        class="tabs-component__overview"
+        role="tabpanel"
+        x-show="activeTab === 'bikes'"
+        x-transition
+      >
+        <img
+          src="https://echelonfit.com/cdn/shop/files/EX5s-Pedling_6a429fa4-82f6-420e-b7d6-7ff4a99a9936.jpg?v=1709835410&width=1080"
+          alt=""
+        />
+        <p>
+          This is required when, for example, the final text is not yet
+          available. Dummy text is also known as 'fill text'. It is said that
+          song composers of the past used dummy texts as lyrics.
+        </p>
+        <a href="#">See More &#8594;</a>
+      </div>
+      <div
+        class="tabs-component__overview"
+        role="tabpanel"
+        x-show="activeTab === 'treadmills'"
+        x-transition
+      >
+        <img
+          src="https://echelonfit.com/cdn/shop/files/Stride-6s-Lifestyle-M-Starting.png?v=1714410362&width=1080"
+          alt=""
+        />
+        <p>
+          This is required when, for example, the final text is not yet
+          available. Dummy text is also known as 'fill text'. It is said that
+          song composers of the past used dummy texts as lyrics.
+        </p>
+        <a href="#">See More &#8594;</a>
+      </div>
+    </div>
+  </body>
+</html>

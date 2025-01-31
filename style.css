@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+:root {
+  --primary-color: rgba(47, 85, 212, 0.9);
+  --secondary-color: #f8f9fa;
+  --third-color: #eff1f4;
+  --color-white: #fff;
+  --text-color: #222222;
+  --text-font-family: "Poppins", sans-serif;
+  --accent-color: #603697;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: var(--text-font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.tabs-component {
+  max-width: 50rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 4fr 8fr;
+  grid-template-areas: "leftC rightC";
+}
+.tabs-component__list {
+  grid-area: leftC;
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  background-color: var(--third-color);
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1rem;
+  padding-top: 24px;
+}
+.tabs-component__list button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  height: 3rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.tabs-component__list button:hover {
+  background: var(--primary-color);
+  color: var(--color-white);
+}
+.tabs-component__list button[aria-selected=true] {
+  background: var(--primary-color);
+  color: var(--color-white);
+}
+.tabs-component__overview {
+  grid-area: rightC;
+  width: 32rem;
+  padding: 24px;
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  border-radius: 10px;
+}
+.tabs-component__overview img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/*# sourceMappingURL=style.css.map */
